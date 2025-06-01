@@ -20,6 +20,7 @@ const Header = () => {
           </Link>
           
           <nav className="hidden md:flex space-x-8">
+            <Link to="/events" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Events</Link>
             <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Features</a>
             <a href="#benefits" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Benefits</a>
             <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Contact</a>
@@ -46,6 +47,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100 animate-fade-in">
             <nav className="flex flex-col space-y-4">
+              <Link to="/events" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Events</Link>
               <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Features</a>
               <a href="#benefits" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Benefits</a>
               <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">Contact</a>
