@@ -1,6 +1,6 @@
 import { Calendar, Clock, MapPin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 // Mock data for events - in a real app, this would come from your backend
 const mockEvents = [
@@ -70,7 +70,7 @@ const Events = () => {
       day: 'numeric' 
     });
   };
-
+  const navigate = useNavigate();
   const getCategoryColor = (category: string) => {
     const colors = {
       Technology: "bg-blue-100 text-blue-800",
@@ -91,6 +91,11 @@ const Events = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-2">College Events</h1>
             <p className="text-lg text-gray-600">Stay updated with all the exciting events happening on campus</p>
+                  <Link to={`/`}>
+                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 text-sm font-medium">
+                      Back
+                    </button>
+                  </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,10 +8,15 @@ import { Label } from "@/components/ui/label";
 const Login = () => {
   const [rollNo, setRollNo] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Login attempt:", rollNo);
+    if(rollNo=='CS2230'){
+      navigate('/events');
+    }else{
+      alert("Wrong username or password")
+      navigate('/')
+    }
     // Add login logic here
   };
 
