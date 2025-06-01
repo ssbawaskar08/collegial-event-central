@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Login attempt:", { rollNo, password });
+    console.log("Login attempt:", rollNo);
     // Add login logic here
   };
 
