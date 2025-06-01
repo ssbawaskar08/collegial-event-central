@@ -1,6 +1,6 @@
-
 import { Calendar, Clock, MapPin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 // Mock data for events - in a real app, this would come from your backend
 const mockEvents = [
@@ -133,9 +133,11 @@ const Events = () => {
                 </div>
 
                 <div className="mt-6">
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 text-sm font-medium">
-                    View Details
-                  </button>
+                  <Link to={`/events/${event.id}`}>
+                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 text-sm font-medium">
+                      View Details
+                    </button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
